@@ -1,0 +1,54 @@
+CREATE TABLE personnes (
+user_id VARCHAR(30) not null,
+argent INTEGER not null,
+lastDaily DATE,
+primary key (user_id)
+);
+
+
+
+CREATE table stats (
+stat_id INTEGER not null AUTO_INCREMENT,
+user_id VARCHAR(30) not null,
+winPileOuFace INTEGER,
+playPileOuFace INTEGER,
+winRPS INTEGER,
+playRPS INTEGER,
+winQuestionQuizz INTEGER,
+pqrticipationQuizz INTEGER,
+primary key (stat_id),
+CONSTRAINT fk_user_stat FOREIGN KEY (user_id) REFERENCES personnes(user_id)
+);
+
+CREATE table recompenses (
+recompense_id INTEGER not null AUTO_INCREMENT,
+name VARCHAR(50) not null,
+primary key (recompense_id)
+);
+
+CREATE table bot(
+bot_id INTEGER not null AUTO_INCREMENT,
+mot_mystere VARCHAR(50),
+primary key (bot_id)
+);
+
+CREATE table marry(
+marry_id INTEGER not null AUTO_INCREMENT,
+user_id1 VARCHAR(30) not null,
+user_id2 VARCHAR(30) not null,
+primary key (marry_id),
+CONSTRAINT fk_user_marry1 FOREIGN KEY (user_id1) REFERENCES personnes(user_id),
+CONSTRAINT fk_user_marry2 FOREIGN KEY (user_id2) REFERENCES personnes(user_id)
+);
+
+CREATE table user_recompense(
+user_recompense_id INTEGER not null AUTO_INCREMENT,
+recompense_id INTEGER not null,
+user_id VARCHAR(30) not null,
+primary key (user_recompense_id),
+CONSTRAINT fk_user_recompense1 FOREIGN KEY (user_id) REFERENCES personnes(user_id),
+CONSTRAINT fk_user_recompense2 FOREIGN KEY (recompense_id) REFERENCES recompenses(recompense_id)
+);
+
+
+
