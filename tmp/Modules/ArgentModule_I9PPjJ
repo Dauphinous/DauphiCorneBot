@@ -11,13 +11,9 @@ namespace Bot\Module\Modules;
 use Skinny\Module\ModuleInterface;
 use Skinny\Network\Wrapper;
 
-use Bot\Module\Modules\ConfigBD;
+require_once "../../config.php";
 
-echo getcwd() . "\n";
-
-require_once 'src/Module/Modules/configBD.php';
-
-class ArgentModule implements ModuleInterface
+class ArgentModule_4b71187ae0139686b16b472fc4ea8f9b implements ModuleInterface
 {
 
     /**

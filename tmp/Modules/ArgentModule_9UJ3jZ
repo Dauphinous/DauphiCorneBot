@@ -15,9 +15,9 @@ use Bot\Module\Modules\ConfigBD;
 
 echo getcwd() . "\n";
 
-require_once 'src/Module/Modules/configBD.php';
+require_once '/home/drest/bot-discord/DauphiCorneBot/src/Module/Module/configBD.php';
 
-class ArgentModule implements ModuleInterface
+class ArgentModule_b2331ddc04028ee09bb494ee619e402a implements ModuleInterface
 {
 
     /**

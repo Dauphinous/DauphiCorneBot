@@ -2,6 +2,7 @@ CREATE TABLE personnes (
 user_id VARCHAR(30) not null,
 argent INTEGER not null,
 lastDaily DATE,
+numberDaily INTEGER,
 primary key (user_id)
 );
 

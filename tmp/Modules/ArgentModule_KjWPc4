@@ -15,9 +15,9 @@ use Bot\Module\Modules\ConfigBD;
 
 echo getcwd() . "\n";
 
-require_once 'src/Module/Modules/configBD.php';
+require_once '/src/Module/Module/configBD.php';
 
-class ArgentModule implements ModuleInterface
+class ArgentModule_d5b335a62aa409bea0c649c961a8b5bc implements ModuleInterface
 {
 
     /**
