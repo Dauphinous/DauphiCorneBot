@@ -1,0 +1,37 @@
+{
+    "name": "skinnybot/plugin-installer",
+    "description": "The plugin installer for Skinny.",
+    "homepage": "https://github.com/Plugin-Installer/Basic",
+    "keywords": ["discord", "bot", "php", "discordphp", "botphp", "skinny", "plugin", "installer"],
+    "type": "composer-installer",
+    "license": "MIT",
+    "support": {
+        "source":"https://github.com/SkinnyBot/Plugin-Installer",
+        "issues":"https://github.com/SkinnyBot/Plugin-Installer/issues"
+    },
+    "authors": [
+        {
+            "name": "Xety",
+            "email": "zoro.fmt@gmail.com",
+            "homepage": "https://github.com/Xety"
+        }
+    ],
+    "require-dev": {
+        "composer/composer": "1.0.*@dev",
+        "squizlabs/php_codesniffer": "3.0.x-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Skinny\\Composer\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Skinny\\Test\\Composer\\": "tests"
+        }
+    },
+    "extra": {
+        "class": "Skinny\\Composer\\Installer\\PluginInstaller"
+    },
+    "minimum-stability": "stable"
+}

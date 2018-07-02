@@ -1,0 +1,11 @@
+.idea
+.brackets.json
+.settings
+flo.js
+composer.lock
+
+/config/config.php
+/vendor/*
+/coverage/*
+/docs/*
+/tests/TestBot/tmp/Modules/*

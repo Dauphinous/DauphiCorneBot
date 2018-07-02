@@ -1,0 +1,41 @@
+{
+    "name": "skinnybot/skinny",
+    "description": "A framework to create discord bot in PHP.",
+    "homepage": "https://github.com/SkinnyBot/Skinny",
+    "keywords": ["discord", "bot", "php", "discordphp", "botphp", "skinny"],
+    "license": "MIT",
+    "support": {
+        "source":"https://github.com/SkinnyBot/Skinny",
+        "issues":"https://github.com/SkinnyBot/Skinny/issues"
+    },
+    "authors": [
+        {
+            "name": "Xety",
+            "email": "zoro.fmt@gmail.com",
+            "homepage": "https://github.com/Xety"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "team-reflex/discord-php": "4.*",
+        "skinnybot/plugin-installer": "~1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*",
+        "squizlabs/php_codesniffer": "3.0.x-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Skinny\\": "src"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SkinnyTest\\": "tests"
+        }
+    },
+    "minimum-stability": "stable"
+}

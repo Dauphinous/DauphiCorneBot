@@ -1,0 +1,45 @@
+{
+    "name": "skinnybot/skinny-skeleton",
+    "description": "A framework to create discord bot in PHP.",
+    "homepage": "https://github.com/SkinnyBot/Skinny-Skeleton",
+    "keywords": ["discord", "bot", "php", "discordphp", "botphp", "skinny"],
+    "type": "project",
+    "license": "MIT",
+    "support": {
+        "source":"https://github.com/SkinnyBot/Skinny-Skeleton",
+        "issues":"https://github.com/SkinnyBot/Skinny-Skeleton/issues"
+    },
+    "authors": [
+        {
+            "name": "Xety",
+            "email": "zoro.fmt@gmail.com",
+            "homepage": "https://github.com/Xety"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "skinnybot/skinny": "~1.0",
+        "skinnybot/plugin-installer": "~1.0",
+        "skinnybot/basic": "~1.0",
+        "skinnybot/module": "~1.0",
+        "google/apiclient": "^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*",
+        "squizlabs/php_codesniffer": "3.0.x-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bot\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "Skinny\\Composer\\Installer\\PluginInstaller::postAutoloadDump"
+    },
+    "minimum-stability": "stable"
+}
