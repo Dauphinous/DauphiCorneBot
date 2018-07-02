@@ -48,7 +48,7 @@ class ArgentModule implements ModuleInterface
      */
     public function onCommandMessage(Wrapper $wrapper, $message)
     {
-        $wrapper->Channel->sendMessage($message['command']);
+        //$wrapper->Channel->sendMessage($message['command']);
         switch ($message['command']) {
             case 'pika':
                 $wrapper->Channel->sendMessage($message['parts'][1]);
