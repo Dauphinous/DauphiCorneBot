@@ -9,18 +9,18 @@
 namespace Bot\Module\Modules;
 
 use Skinny\Module\ModuleInterface;
-use Skinny\Module\Modules\ConfigBD;
+//use Skinny\Module\Modules\ConfigBD;
 use Skinny\Network\Wrapper;
+use Bot\Module\Modules\ConfigBD;
 
 echo 'PIKAAAAAAAAAAAAAAAAAAAAAAAA';
 
 
-require_once 'src/Module/Modules/configBD.php';
-require_once 'src/Module/User.php';
+//require_once 'src/Module/Modules/configBD.php';
 
 ConfigBD::initializeBD();
 
-class ArgentModule implements ModuleInterface
+class ArgentModule_2dc23fc9dea71a2263a7def970320535 implements ModuleInterface
 {
 
     /**

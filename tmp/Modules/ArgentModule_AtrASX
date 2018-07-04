@@ -12,15 +12,14 @@ use Skinny\Module\ModuleInterface;
 use Skinny\Module\Modules\ConfigBD;
 use Skinny\Network\Wrapper;
 
+
 echo 'PIKAAAAAAAAAAAAAAAAAAAAAAAA';
 
 
-require_once 'src/Module/Modules/configBD.php';
-require_once 'src/Module/User.php';
 
 ConfigBD::initializeBD();
 
-class ArgentModule implements ModuleInterface
+class ArgentModule_b650b08b6bcfca41bd486014322437e7 implements ModuleInterface
 {
 
     /**

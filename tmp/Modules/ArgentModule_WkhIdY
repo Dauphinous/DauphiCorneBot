@@ -9,18 +9,17 @@
 namespace Bot\Module\Modules;
 
 use Skinny\Module\ModuleInterface;
-use Skinny\Module\Modules\ConfigBD;
 use Skinny\Network\Wrapper;
+
 
 echo 'PIKAAAAAAAAAAAAAAAAAAAAAAAA';
 
 
 require_once 'src/Module/Modules/configBD.php';
-require_once 'src/Module/User.php';
 
 ConfigBD::initializeBD();
 
-class ArgentModule implements ModuleInterface
+class ArgentModule_d4fed8bde59f913819c17035577c2257 implements ModuleInterface
 {
 
     /**
@@ -60,11 +59,8 @@ class ArgentModule implements ModuleInterface
         $wrapper->Channel->sendMessage($wrapper->Message->author->username . "#" . $wrapper->Message->author->discriminator );
         switch ($message['command']) {
             case 'pika':
-
                 $wrapper->Channel->sendMessage($message['parts'][1]);
 
-                $author = $wrapper->Message->author->username . "#" . $wrapper->Message->author->discriminator ;
-                User::createUser($author);
                 break;
         }
 
