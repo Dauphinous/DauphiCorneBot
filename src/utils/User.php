@@ -46,4 +46,13 @@ class User
         }
     }
 
+    public static function addMoney($idUser, $moneyAdd){
+        $sql = ConfigBD::$bdd->prepare('SELECT argent FROM personnes where user_id = :author');
+        $sql->execute(array(':author'=>$idUser));
+
+        $result = $sql->fetchAll();
+        $sql = ConfigBD::$bdd->prepare('UPDATE `personnes` SET `argent` = :argent WHERE `personnes`.`user_id` = :idUser;');
+        $sql->execute(array(':argent'=>$moneyAdd+$result[0][0],":idUser"=>$idUser));
+    }
+
 }

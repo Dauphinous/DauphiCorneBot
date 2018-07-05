@@ -67,6 +67,7 @@ class ArgentModule implements ModuleInterface
                 $author = $wrapper->Message->author->username . "#" . $wrapper->Message->author->discriminator ;
 echo "JUSTE AVANT";                
 User::createUser($author);
+User::addMoney($author,25);
                 break;
         }
 

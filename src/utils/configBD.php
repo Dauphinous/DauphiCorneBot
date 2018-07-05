@@ -11,7 +11,6 @@ namespace Bot\utils;
 use Skinny\Module\ModuleInterface;
 //use SkinnyModule\Module\ConfigBD;
 use Skinny\Network\Wrapper;
-use Bot\utils\ConfigBD;
 use PDO;
 
 class ConfigBD implements ModuleInterface {
