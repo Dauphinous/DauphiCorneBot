@@ -6,7 +6,7 @@
  * Time: 16:38
  */
 
-namespace Skinny\Module\Modules;
+namespace Bot\Module\Modules;
 
 
 
@@ -21,7 +21,7 @@ class ConfigBD{
     public static function initializeBD()
     {
         try{
-            self::$bdd = new PDO('mysql:host=127.0.0.1;dbname=test;charset=utf8', null, null);
+            self::$bdd = new PDO('mysql:host=127.0.0.1;dbname=test;charset=utf8', 'root', '');
         }catch (Exception $e)
         {
             die('Erreur : ' . $e->getMessage());

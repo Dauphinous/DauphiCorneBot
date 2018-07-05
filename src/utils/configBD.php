@@ -2,29 +2,35 @@
 /**
  * Created by PhpStorm.
  * User: drest
- * Date: 30/05/18
- * Time: 14:47
+ * Date: 02/07/18
+ * Time: 16:38
  */
 
-namespace Bot\Module\Modules;
+namespace Bot\utils;
 
 use Skinny\Module\ModuleInterface;
+//use SkinnyModule\Module\ConfigBD;
 use Skinny\Network\Wrapper;
-use Bot\utils\configBD;
-use Bot\utils\User;
+use Bot\utils\ConfigBD;
+use PDO;
 
-echo 'PIKAAAAAAAAAAAAAAAAAAAAAAAA';
-echo getcwd();
+class ConfigBD implements ModuleInterface {
 
-//require_once 'DauphiCorneBot/src/Module/Modules/configBD.php';
-//require_once 'DauphiCorneBot/src/Module/Modules/User.php';
+    private static $user = null;
+    private static $pass = null;
+    public static $bdd = null;
 
-ConfigBD::initializeBD();
+    public static function initializeBD()
+    {
+        try{
+            self::$bdd = new PDO('mysql:host=127.0.0.1;dbname=test;charset=utf8', 'root', '');
+        }catch (Exception $e)
+        {
+            die('Erreur : ' . $e->getMessage());
+        }
 
-class ArgentModule implements ModuleInterface
-{
-
-    /**
+    }
+/**
      * {@inheritDoc}
      *
      * @param \Skinny\Network\Wrapper $wrapper The Wrapper instance.
@@ -58,20 +64,10 @@ class ArgentModule implements ModuleInterface
      */
     public function onCommandMessage(Wrapper $wrapper, $message)
     {
-        $wrapper->Channel->sendMessage($wrapper->Message->author->username . "#" . $wrapper->Message->author->discriminator );
-        switch ($message['command']) {
-            case 'pika':
-
-                $wrapper->Channel->sendMessage($message['parts'][1]);
-
-                $author = $wrapper->Message->author->username . "#" . $wrapper->Message->author->discriminator ;
-echo "JUSTE AVANT";                
-User::createUser($author);
-                break;
-        }
 
     }
-}
 
+
+}
 
 ?>

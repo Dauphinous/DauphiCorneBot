@@ -57,7 +57,6 @@ class ModuleManager implements ArrayAccess, Countable
             foreach ($plugins as $plugin) {
                 $path = Plugin::classPath($plugin) . 'Module' . DS . 'Modules';
                 $files = new DirectoryIterator($path);
-
                 $this->loadModules($files, ['pathDir' => $path, 'plugin' => $plugin]);
             }
         }

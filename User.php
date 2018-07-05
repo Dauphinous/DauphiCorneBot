@@ -6,9 +6,9 @@
  * Time: 13:24
  */
 
-namespace Skinny\Module;
+namespace Bot\Module;
 
-require_once 'src/Module/Modules/configBD.php';
+require_once 'DauphiCorneBot/configBD.php';
 
 
 class User
