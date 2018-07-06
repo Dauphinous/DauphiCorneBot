@@ -14,7 +14,7 @@ class Command
      */
     public static function syntax($message)
     {
-        return 'Not enough parameters given. Syntax: `' . Configure::read('Command.prefix') .
+        return Configure::read('Command.prefix') .
             Configure::read('Commands')[$message['command']]['syntax'] . '`';
     }
 

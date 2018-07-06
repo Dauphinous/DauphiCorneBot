@@ -12,6 +12,10 @@ return [
         'pika' => [
             'params' => 1,
             'syntax' => 'pika [Message]'
+        ],
+        'rps' => [
+            'params' => 2,
+            'syntax' => 'rps [pierre|papier|ciseaux] [Nombre de DauphiCoins]'
         ]
     ]
 ];

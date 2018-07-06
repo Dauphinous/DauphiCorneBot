@@ -14,9 +14,10 @@ user_id VARCHAR(30) not null,
 winPileOuFace INTEGER,
 playPileOuFace INTEGER,
 winRPS INTEGER,
+egaliteRPS INTEGER,
 playRPS INTEGER,
 winQuestionQuizz INTEGER,
-pqrticipationQuizz INTEGER,
+participationQuizz INTEGER,
 primary key (stat_id),
 CONSTRAINT fk_user_stat FOREIGN KEY (user_id) REFERENCES personnes(user_id)
 );

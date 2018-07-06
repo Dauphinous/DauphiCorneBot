@@ -43,6 +43,9 @@ class User
             echo "cree le user";
             $sql = ConfigBD::$bdd->prepare('INSERT INTO `personnes` (`user_id`, `argent`, `lastDaily`, `numberDaily`) VALUES (:author, "100",:date , 1);');
             $sql->execute(array(':author'=>$idUser, ':date'=>date("Y-m-d")));
+            $sql = ConfigBD::$bdd->prepare('INSERT INTO `stats` (`stat_id`, `user_id`, `winPileOuFace`, `playPileOuFace`, `winRPS`, `egaliteRPS`, `playRPS`,
+            `winQuestionQuizz`, `participationQuizz`) VALUES (NULL, :author, \'0\', \'0\', \'0\', \'0\', \'0\', \'0\', \'0\');');
+            $sql->execute(array(':author'=>$idUser));
         }
     }
 
