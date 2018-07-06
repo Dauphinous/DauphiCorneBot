@@ -11,7 +11,7 @@ use Skinny\Utility\User;
 
 class Server
 {
-    public $nbMessageErrorCommand = 18;
+    public $nbMessageErrorCommand = 23;
     public $allErrorCommandMessage = array(
         "Non mais t'es serieux ? Aller, tiens la bonne commande : ",
         "Tu m'a pris pour un Dauphin-garou ? Genre vraiment ? C'est pas simpas de te tromper de commande :'(",
@@ -30,7 +30,12 @@ class Server
         "Bonjour, tu t'es trompe de numero ... enfin de commande, voici la bonne : ",
         "Un jour j'essaierai de te comprendre, en attendant, essaye de faire la bonne commande :p :",
         "Maiiiiis, je sais que j'écris comme un champignon mais theoriquement mon help est lisible, voici la bonne commande : :(",
-        "Bande d'humain, heuresement que je suis la pour vous donner la bonne commande ... : "
+        "Bande d'humain, heuresement que je suis la pour vous donner la bonne commande ... : ",
+        "C'est là qu'on voit la difference entre vous et un Dauphin, on se trompe jamais, tiens, voici la commande : ",
+        "MOUAHAHAHA, les commandes de Dieu sont impenetrables. Cependant, dans ma misericorde je vais t'en donner une : ",
+        "OUUUUUIN, je pensais tout faire bien mais vous faites erreur, je ne sais pas coment m'améliorer ormi en te redonnant la commande : ",
+        "*Attaque éclair*,  pikachuuuuuuuu : ",
+        "Le monde n'est visiblement pas prêt pour moi, es-tu sûr de vouloir faire cette commande ?"
         );
 
     /**
