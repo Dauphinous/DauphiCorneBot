@@ -63,7 +63,7 @@ class ArgentModule implements ModuleInterface
             case 'pika':
 
                 $wrapper->Channel->sendMessage($message['parts'][1]);
-
+    
                 $author = $wrapper->Message->author->username . "#" . $wrapper->Message->author->discriminator ;
 echo "JUSTE AVANT";                
 User::createUser($author);
