@@ -8,6 +8,7 @@
 
 namespace Bot\Module\Modules;
 
+use Bot\utils\Stats;
 use Skinny\Module\ModuleInterface;
 use Skinny\Network\Wrapper;
 use Bot\utils\User;
@@ -85,7 +86,7 @@ class RPSModule implements ModuleInterface
                 "description" => "Je joue aussi " . $weaponJoueur . " donc je te rends tes DauphiCoins et tu gagnes rien, sorry :/"
 
             );
-
+            Stats::newPartyGame("rps", $author, "egalite");
         } else if($weapons[$weaponJoueur] == ($botWeapon+1)%3){ // defaite
             $embed = array(
                 "color"=> 7478274,
@@ -97,6 +98,7 @@ class RPSModule implements ModuleInterface
 
             );
             User::addMoney($author,-$nbDauphiCoins);
+            Stats::newPartyGame("rps", $author, "defaite");
         } else { // victoire
             $embed = array(
                 "color"=> 4304030,
@@ -109,6 +111,7 @@ class RPSModule implements ModuleInterface
 
             );
             User::addMoney($author,$nbDauphiCoins);
+            Stats::newPartyGame("rps", $author, "victoire");
         }
         return $embed;
     }

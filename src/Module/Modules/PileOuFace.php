@@ -8,6 +8,7 @@
 
 namespace Bot\Module\Modules;
 
+use Bot\utils\Stats;
 use Discord\Parts\Guild\Emoji;
 use Skinny\Module\ModuleInterface;
 use Skinny\Network\Wrapper;
@@ -91,6 +92,7 @@ class PileOuFace implements ModuleInterface
 
             );
             User::addMoney($author,$nbDauphiCoins);
+            Stats::newPartyGame("pf",$author,"victoire");
         } else { // defaite
 
             $embed = array(
@@ -102,6 +104,7 @@ class PileOuFace implements ModuleInterface
                 "description" => "J'ai tiré " . $weaponsEnnemi[$botWeapon] . " donc tu perds MOUAHAHAHA, à moi tes DauphiCoins (meme s'ils m'appartenaient déjà) , sorry :/"
             );
             User::addMoney($author,-$nbDauphiCoins);
+            Stats::newPartyGame("pf",$author,"defaite");
         }
         return $embed;
     }
