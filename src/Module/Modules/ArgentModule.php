@@ -58,7 +58,7 @@ class ArgentModule implements ModuleInterface
      */
     public function onCommandMessage(Wrapper $wrapper, $message)
     {
-        $wrapper->Channel->sendMessage($wrapper->Message->author->username . "#" . $wrapper->Message->author->discriminator );
+        //$wrapper->Channel->sendMessage($wrapper->Message->author->username . "#" . $wrapper->Message->author->discriminator );
         switch ($message['command']) {
             case 'pika':
 

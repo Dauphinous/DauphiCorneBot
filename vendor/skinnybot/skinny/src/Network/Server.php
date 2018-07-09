@@ -16,7 +16,7 @@ class Server
         "Non mais t'es serieux ? Aller, tiens la bonne commande : ",
         "Tu m'a pris pour un Dauphin-garou ? Genre vraiment ? C'est pas simpas de te tromper de commande :'(",
         "MDRRRRRRRR et ça se dit membre du discord DauphiCorne ? Allez bleusaille, voici la bonne commande :",
-        "Ca veut voit que la vampicorne est mieux que toi, elle se trompe jamais elle, voici ce qu'elle aurait écrit : ",
+        "Ca ce voit que la vampicorne est mieux que toi, elle se trompe jamais elle, voici sse qu'elle aurait écrit : ",
         "Miaou, ET BAH NON, voici la bonne commande miaou : ",
         "ET 1, ET 2, ET 3 fois que tu trompes, stop stp c'est relou :'(, la commande est simple pourtant : ",
         "Je suis trop gentil, je te donne la SEULE et unique bonne commande :p : ",

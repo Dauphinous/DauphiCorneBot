@@ -58,4 +58,12 @@ class User
         $sql->execute(array(':argent'=>$moneyAdd+$result[0][0],":idUser"=>$idUser));
     }
 
+    public static function getMoney($idUser){
+        $sql = ConfigBD::$bdd->prepare('SELECT argent FROM personnes where user_id = :author');
+        $sql->execute(array(':author'=>$idUser));
+        $result = $sql->fetchAll();
+
+        return $result[0][0];
+    }
+
 }

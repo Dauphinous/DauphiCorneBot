@@ -43,7 +43,7 @@ return [
  * - storeMessages - Whether messages received should be stored.
  */
     'Discord' => [
-        'token' => 'NDQ5NTc5MDE1NjQxMjM1NDU3.DemvOg.i5jyzPHrPLwf9AhUwgjW1BqT0fg',
+        'token' => 'NDYxNTcxNDg3NDI2NTQzNjIw.DiTQzQ.l5sExlSGwEPXzfBYGTqOED_Oqt8',
         'logging' => true,
         'pmChannels' => true,
     ],

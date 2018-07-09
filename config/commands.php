@@ -16,6 +16,10 @@ return [
         'rps' => [
             'params' => 2,
             'syntax' => 'rps [pierre|papier|ciseaux] [Nombre de DauphiCoins]'
+        ],
+        'pf' => [
+            'params' => 2,
+            'syntax' => 'pf [pile|face] [Nombre de DauphiCoins]'
         ]
     ]
 ];
