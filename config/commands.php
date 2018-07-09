@@ -16,6 +16,11 @@ return [
         'rps' => [
             'params' => 2,
             'syntax' => 'rps [pierre|papier|ciseaux] [Nombre de DauphiCoins]'
-        ]
+        ],
+	   
+  	    'daily' => [
+            'params' => 0,
+            'syntax' => 'daily blop'
+        ],
     ]
 ];

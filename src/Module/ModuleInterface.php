@@ -34,4 +34,5 @@ interface ModuleInterface
      * @return void
      */
     public function onPrivateMessage(Wrapper $wrapper, $message);
+	
 }

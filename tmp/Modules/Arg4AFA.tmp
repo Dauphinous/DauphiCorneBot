@@ -21,7 +21,7 @@ echo getcwd();
 
 ConfigBD::initializeBD();
 
-class ArgentModule implements ModuleInterface
+class ArgentModule_35e14130bf9b5fcb43878a0c6d904469 implements ModuleInterface
 {
 
     /**
@@ -75,18 +75,15 @@ User::addMoney($author,25);
 
 /** Je commence a coder, c'est la merde. */
 
-	public function onDailyMessage($message)
-	{
-	$DauphiCoin = 100 ;
-	$author = $wrapper->Message->author->username . "#" . $wrapper->Message->author->discriminator ;
-	$numberDaily = 1 ;
-	
-        if ( $message == '!daily blop' )
-		{ 
-		User::addMonney($author,$DauphiCoin); 
-		User::addnumberDaily($author,$numberDaily);
-		}
-		
+	public function onDailyMessage(Wrapper $wrapper, $message)
+    {
+        if $message="!daily blop" 
+		else
+    
+              
+User::addMoney($author,100);
+                break;
+        }
 
     }
 
