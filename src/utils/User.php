@@ -65,5 +65,13 @@ class User
 
         return $result[0][0];
     }
+	public static function addDaily($idUser){
+        $sql = ConfigBD::$bdd->prepare('SELECT numberDaily FROM personnes where user_id = :author');
+        $sql->execute(array(':author'=>$idUser));
+
+        $result = $sql->fetchAll();
+        $sql = ConfigBD::$bdd->prepare('UPDATE `personnes` SET `numberDaily` = :numberDaily WHERE `personnes`.`user_id` = :idUser;');
+        $sql->execute(array(':numberDaily'=>$moneyAdd+$result[0][0],":idUser"=>$idUser));
+	}
 
 }

@@ -20,6 +20,10 @@ return [
         'pf' => [
             'params' => 2,
             'syntax' => 'pf [pile|face] [Nombre de DauphiCoins]'
+        ],
+		 'daily' => [
+            'params' => 0,
+            'syntax' => 'daily'
         ]
     ]
 ];

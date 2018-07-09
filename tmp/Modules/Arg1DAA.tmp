@@ -21,7 +21,7 @@ echo getcwd();
 
 ConfigBD::initializeBD();
 
-class ArgentModule implements ModuleInterface
+class ArgentModule_1e9ad4896f6708633bec165c40f8f6a3 implements ModuleInterface
 {
 
     /**
@@ -72,13 +72,11 @@ User::addMoney($author,25);
 			case 'daily':
 			
 			$wrapper->Channel->sendMessage($message['parts'][1]);
-			
 			$author = $wrapper->Message->author->username . "#" . $wrapper->Message->author->discriminator ;
-			
 echo "JUSTE AVANT";                
 User::addnumberDaily($author,1);
 User::addMoney($author,100);
-				break; 
+				break 
        
 	   }
 
